@@ -1,10 +1,11 @@
 import React from "react";
 import "../Tariff/Tariff.css";
 
-const Tariff = ({ title, price, speed, color, isHighlighted }) => (
+const Tariff = ({ title, price, speed, color, isHighlighted, onClick }) => (
   <div
     className={`tariff ${isHighlighted ? "highlighted" : ""}`}
     style={{ borderColor: color }}
+    onClick={onClick}
   >
     <div className="tariff-header" style={{ backgroundColor: color }}>
       <h3>{title}</h3>
